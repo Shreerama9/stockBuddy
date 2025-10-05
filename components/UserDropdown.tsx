@@ -1,6 +1,8 @@
 "use client";
 import { useRouter } from "next/navigation";
+import NavItems from "@/components/NavItems";
 import { Button } from "@/components/ui/button";
+import { LogOut } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -63,6 +65,20 @@ const UserDropdown = () => {
 
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-gray-600"/>
+
+            <DropdownMenuItem onClick={handleSingout} className="text-gray-100 text-md font-medium focus:bg-transparent focus:text-yellow-500 transition-colors cursor-pointer">
+                <LogOut className='h-4 2-4 mr-2 hidden sm:block ' />
+                Logout
+
+
+
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator className="hidden sm:block  bg-gray-600"/>
+                <nav className="sm:hidden">
+                    <NavItems/>
+
+                </nav>    
             
         </DropdownMenuContent>
     </DropdownMenu>
